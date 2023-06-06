@@ -1,0 +1,11 @@
+.form input[type="text"],
+.form input[type="phone"],
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
