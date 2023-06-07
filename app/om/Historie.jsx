@@ -28,7 +28,6 @@ function Historie() {
         &quot;
       </p>
       <p className="pb-5 font-copy text-copy">- Tony Svensson og Jan Bay, stiftere af Plateau Spirits</p>
-      <Button href="/shop" text="Se vores produkter"></Button>
     </div>
   );
 }

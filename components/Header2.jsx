@@ -70,6 +70,10 @@ export default function Navbar() {
       href: "/shop",
     },
     {
+      label: "PLATEAU GO",
+      href: "/plateau-go",
+    },
+    {
       label: "OM",
       href: "/om",
     },

@@ -1,12 +1,11 @@
 "use client";
-import Historie from "@/components/historie";
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useSWRConfig } from "swr";
 import { addToCart } from "@/lib/swell/cart";
 
-const Product = ({ product }) => {
+const ProductGo = ({ product }) => {
   const router = useRouter();
   const { mutate } = useSWRConfig();
   const [isPending, startTransition] = useTransition();
@@ -65,12 +64,10 @@ const Product = ({ product }) => {
               </div>
             </form>
           </div>
-
-          <Historie />
         </div>
       </div>
     </div>
   );
 };
 
-export default Product;
+export default ProductGo;
