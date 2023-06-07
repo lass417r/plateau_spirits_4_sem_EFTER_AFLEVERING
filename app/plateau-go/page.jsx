@@ -1,5 +1,5 @@
 import { getProductsGo } from "@/lib/swell/products";
-import PlateauGo from "./PlateauGo";
+import PlateauGo from "@/components/PlateauGo";
 import Image from "next/image";
 import minibg from "../../public/images/go/minibg.png";
 import pic1 from "../../public/images/go/pic1.png";
@@ -9,7 +9,7 @@ export default async function productsPageGo({}) {
     /* Her fetcher vi vores productdata og modtager det som et array */
   }
   const { results: products } = await getProductsGo({ page: 1 });
-  console.log(products[0].images[0]);
+
   return (
     <div className="">
       {/* Her videresender vi vores products array til 
