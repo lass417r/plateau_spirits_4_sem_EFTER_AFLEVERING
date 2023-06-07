@@ -24,13 +24,14 @@ export default async function productsPageGo({}) {
             <p className="font-copy  lg:max-w-[85%]">
               <br />
               <span className="text-copy">
-                Præsenterer Plateau Spirits' eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende København. Hver flaske er et
+                Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende København. Hver flaske er et
                 vidnesbyrd om mestrenes håndværk og dedikation hos Plateau Spirits, der har perfektioneret den delikate balance mellem forfriskende botanicals og sprudlende citrusnoter.
               </span>
               <br />
               <br />
               <br />
             </p>
+
             <a href="#KontaktEvents" className="voresKnap border-2  border-black400 bg-white100 px-5  py-3 font-ssort text-black400 md:text-deskButtonPrimary md:tracking-wider">
               Se udvalg
             </a>
@@ -43,26 +44,26 @@ export default async function productsPageGo({}) {
 
       <section className="bg-clay">
         <div className="md:mx-32">
-          <div className="flex flex-col gap-10  py-20 md:grid md:grid-cols-3 md:pb-20 md:pb-32">
+          <div className="flex flex-col gap-10  py-20 md:grid md:grid-cols-3 md:pb-32">
             <div className="flex flex-col items-center gap-10 p-5">
               <h6 className="font-tyk text-titlem text-orangebase md:text-titlexl">1</h6>
               <h3 className="-mt-16 font-tyk text-mobileH3 md:text-wh3">Bestil</h3>
               <p className="max-w-[70%] font-copy md:max-w-[90%]">
-                Præsenterer Plateau Spirits' eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
+                Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
               </p>
             </div>
             <div className="flex flex-col items-center gap-10 p-5">
               <h6 className="font-tyk text-titlem text-orangebase md:text-titlexl">2</h6>
               <h3 className="-mt-16 font-tyk text-mobileH3 md:text-wh3">Nyd</h3>
               <p className="max-w-[70%] font-copy md:max-w-[90%]">
-                Præsenterer Plateau Spirits' eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
+                Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
               </p>
             </div>
             <div className="flex flex-col items-center gap-10 p-5">
               <h6 className=" font-tyk text-titlem text-orangebase md:text-titlexl">3</h6>
               <h3 className="-mt-16 font-tyk text-mobileH3 md:text-wh3">Returner</h3>
               <p className="max-w-[70%] font-copy md:max-w-[90%]">
-                Præsenterer Plateau Spirits' eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
+                Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
               </p>
             </div>
           </div>
@@ -76,7 +77,7 @@ export default async function productsPageGo({}) {
             <p className="font-copy  lg:max-w-[85%]">
               <br />
               <span className="text-copy">
-                Præsenterer Plateau Spirits' eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende København. Hver flaske er et
+                Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende København. Hver flaske er et
                 vidnesbyrd om mestrenes håndværk og dedikation hos Plateau Spirits, der har perfektioneret den delikate balance mellem forfriskende botanicals og sprudlende citrusnoter.
               </span>
               <br />
