@@ -16,12 +16,12 @@ export default async function productsPageGo({}) {
       vores komponent der mapper over dataen */}
       <section className=" flex flex-col items-center gap-20 p-5 md:mx-32">
         <div className="flex flex-col items-start gap-20 p-5 md:mb-20 md:flex-row">
-          <div className="basis-1/2">
-            <Image className="h-full w-full" src={minibg} width={1250} height={1250} alt="Billede af lokation" />
+          <div className="h-auto w-full basis-1/2">
+            <Image className="h-auto w-full" src={minibg} width={1250} height={1250} alt="Billede af lokation" />
           </div>
-          <div className="top-36 basis-1/2 lg:max-w-[80%]">
+          <div className="top-36 basis-1/2 md:sticky lg:max-w-[80%]">
             <h1 className="font-tyk text-mobileH1 md:text-wh1 ">PlateauGO</h1>
-            <p className="font-copy  lg:max-w-[85%]">
+            <p className="max-w-[95%] font-copy lg:max-w-[85%]">
               <br />
               <span className="text-copy">
                 Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende København. Hver flaske er et
@@ -32,35 +32,35 @@ export default async function productsPageGo({}) {
               <br />
             </p>
 
-            <a href="#KontaktEvents" className="voresKnap border-2  border-black400 bg-white100 px-5  py-3 font-ssort text-black400 md:text-deskButtonPrimary md:tracking-wider">
+            <a href="#udvalg" className="voresKnap border-2  border-black400 bg-white100 px-5  py-3 font-ssort text-black400 md:text-deskButtonPrimary md:tracking-wider">
               Se udvalg
             </a>
           </div>
         </div>
-        <div>
-          <h2 className="font-tyk text-mobileH2 md:mb-5 md:mt-20 md:text-wh2 ">Hvorfor vælge PlateauGO?</h2>
-        </div>
       </section>
 
       <section className="bg-clay">
-        <div className="md:mx-32">
-          <div className="flex flex-col gap-10  py-20 md:grid md:grid-cols-3 md:pb-32">
+        <div className="py-5 md:mx-32">
+          <div className="flex flex-col items-center p-10 text-center ">
+            <h2 className="mt-5 font-tyk text-mobileH2 md:mb-5 md:mt-20 md:text-wh2 ">Hvorfor vælge PlateauGO?</h2>
+          </div>
+          <div className="flex flex-col gap-10  md:grid md:grid-cols-3 md:pb-20">
             <div className="flex flex-col items-center gap-10 p-5">
-              <h6 className="font-tyk text-titlem text-orangebase md:text-titlexl">1</h6>
+              <h6 className="font-tyk text-titlem text-orangebase md:text-titlem">1</h6>
               <h3 className="-mt-16 font-tyk text-mobileH3 md:text-wh3">Bestil</h3>
               <p className="max-w-[70%] font-copy md:max-w-[90%]">
                 Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
               </p>
             </div>
             <div className="flex flex-col items-center gap-10 p-5">
-              <h6 className="font-tyk text-titlem text-orangebase md:text-titlexl">2</h6>
+              <h6 className="font-tyk text-titlem text-orangebase md:text-titlem">2</h6>
               <h3 className="-mt-16 font-tyk text-mobileH3 md:text-wh3">Nyd</h3>
               <p className="max-w-[70%] font-copy md:max-w-[90%]">
                 Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
               </p>
             </div>
             <div className="flex flex-col items-center gap-10 p-5">
-              <h6 className=" font-tyk text-titlem text-orangebase md:text-titlexl">3</h6>
+              <h6 className=" font-tyk text-titlem text-orangebase md:text-titlem">3</h6>
               <h3 className="-mt-16 font-tyk text-mobileH3 md:text-wh3">Returner</h3>
               <p className="max-w-[70%] font-copy md:max-w-[90%]">
                 Præsenterer Plateau Spirits&lsquo; eksklusive færdigblandede Gin og Tonic, en harmonisk kombination fremstillet med lidenskab i hjertet af det pulserende
@@ -70,9 +70,9 @@ export default async function productsPageGo({}) {
         </div>
       </section>
 
-      <section className=" my-8 flex flex-col items-center gap-20 p-5 md:mx-32 md:my-24">
-        <div className="flex flex-col items-start gap-20 p-5 md:mb-20 md:flex-row">
-          <div className="top-36 basis-1/2 lg:max-w-[80%]">
+      <section className=" my-8 flex flex-col items-center gap-20 p-5 md:mx-32 md:my-20">
+        <div className="flex flex-col items-start gap-20 p-5  md:flex-row">
+          <div className="top-36 basis-1/2 md:sticky lg:max-w-[80%]">
             <h2 className="font-tyk text-mobileH2 md:text-wh2 ">Vores proces</h2>
             <p className="font-copy  lg:max-w-[85%]">
               <br />
@@ -90,9 +90,11 @@ export default async function productsPageGo({}) {
         </div>
       </section>
 
-      <section className="md:mx-32 md:mb-20">
-        <h2 className="font-tyk text-mobileH2 md:text-wh2 ">Se vores PlateauGO produkter</h2>
-        <div className=" flex flex-col items-center gap-10 md:mt-20 md:grid md:grid-cols-3 md:items-baseline">
+      <section id="udvalg" className="flex flex-col gap-5 p-5 md:mx-32 md:mb-20 md:pt-28">
+        <div>
+          <h2 className="font-tyk text-mobileH2 md:text-wh2 ">Se vores PlateauGO produkter</h2>
+        </div>
+        <div className="flex flex-col items-center gap-10 md:grid md:grid-cols-3 md:items-baseline">
           {products.map((product) => (
             <PlateauGo key={product.id} product={product} />
           ))}

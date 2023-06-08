@@ -31,7 +31,7 @@ const ProductGo = ({ product }) => {
           <Image src={product.images[0].file.url} alt={product.name} fill className="  object-cover object-center"></Image>
         </div>
         {/* Product info */}
-        <div className="sm:px-0 md:px-4 ">
+        <div className="block sm:px-0 md:sticky md:px-4">
           <h1 className="font-tyk text-mobileH1 text-blackbase md:text-wh1">{product.name}</h1>
           <div>
             <div className="mt-3">
@@ -39,8 +39,48 @@ const ProductGo = ({ product }) => {
             </div>
 
             <div className="mt-10">
-              <h5 className="font-tyk text-mobileH5 text-blackbase md:text-wh5">Pris</h5>
-              <p className="font-copy text-copy text-blackbase">{product.price} DKK</p>
+              <h6 className="text-mobileH6 py-3 font-normal text-blackbase md:text-wh6">Valgmuligheder</h6>
+              <div>
+                <form action="" className="flex flex-row flex-wrap gap-3">
+                  <label
+                    for="rad1"
+                    className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <input id="rad1" type="radio" name="valgmuligheder" value="1 stk" className="accent-orangebase" /> &nbsp; 1 stk
+                  </label>
+                  <label
+                    for="rad2"
+                    className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <input id="rad2" type="radio" name="valgmuligheder" value="Smagskasse" className="accent-orangebase" />
+                    &nbsp; Smagskasse
+                  </label>
+                  <label
+                    for="rad3"
+                    className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <input id="rad3" type="radio" name="valgmuligheder" value="12 stk" className="accent-orangebase" />
+                    &nbsp; 12 stk
+                  </label>
+                  <label
+                    for="rad4"
+                    className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <input id="rad4" type="radio" name="valgmuligheder" value="24 stk" className="accent-orangebase" />
+                    &nbsp; 24 stk
+                  </label>
+                  <label
+                    for="rad5"
+                    className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    <input id="rad5" type="radio" name="valgmuligheder" value="Drink what you can" className="accent-orangebase" />
+                    &nbsp; Drink what you can
+                  </label>
+                </form>
+              </div>
+            </div>
+            <div className="mt-10">
+              <h6 className="text-mobileH6 font-normal text-blackbase md:text-wh6">Pris {product.price} DKK</h6>
             </div>
 
             <form className="" onSubmit={handleSubmit}>
