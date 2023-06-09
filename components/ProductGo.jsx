@@ -195,7 +195,7 @@ const ProductGo = ({ product }) => {
                             </div>
                           </label>
                         </li>
-                        <li className={`${styles["go-li"]} col-span-1`}>
+                        <li className={`${styles["go-li"]} col-span-1 `}>
                           <input type="checkbox" id="cb3" className={styles["go-cb"]} />
                           <label for="cb3" className={`${styles["go-label"]} pb-14 md:pb-10`}>
                             <div className="relative">
