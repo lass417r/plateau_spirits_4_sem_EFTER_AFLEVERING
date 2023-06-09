@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { useSWRConfig } from "swr";
 import { addToCart } from "@/lib/swell/cart";
-import "@/styles/go.css";
+import styles from "@/styles/Go.module.css";
 
 import bauhaus from "@/public/images/go/bauhaus.png";
 import spacey from "@/public/images/go/spacey.png";
@@ -18,12 +18,15 @@ const ProductGo = ({ product }) => {
   const router = useRouter();
   const { mutate } = useSWRConfig();
   const [isPending, startTransition] = useTransition();
+  const [selectedPrice, setSelectedPrice] = useState(product.price);
   const [quantity, setQuantity] = useState(1);
   const [showMe, setShowMe] = useState(true);
 
-  function toggleTrue() {
+  const toggleTrue = (price) => {
+    setSelectedPrice(price);
     setShowMe(true);
-  }
+  };
+
   function toggleFalse() {
     setShowMe(false);
   }
@@ -47,7 +50,6 @@ const ProductGo = ({ product }) => {
         <div className="relative flex aspect-[1/1] md:sticky  md:top-36  md:mb-16">
           <Image src={product.images[0].file.url} alt={product.name} fill className="  object-cover object-center"></Image>
         </div>
-        {/* Product info */}
         <div className="block sm:px-0 md:sticky md:px-4">
           <h1 className="font-tyk text-mobileH1 text-blackbase md:text-wh1">{product.name}</h1>
           <div>
@@ -58,32 +60,32 @@ const ProductGo = ({ product }) => {
             <div className="mt-10">
               <h6 className="text-mobileH6 py-3 font-normal text-blackbase md:text-wh6">Valgmuligheder</h6>
               <div>
-                <form action="" className="flex flex-row flex-wrap gap-3">
+                <form action="" className="flex flex-row flex-wrap gap-2 md:gap-3">
                   <label
                     for="rad1"
                     className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    <input onClick={toggleTrue} id="rad1" type="radio" name="valgmuligheder" value="1 stk" className="accent-orangebase" /> &nbsp; 1 stk
+                    <input onClick={() => toggleTrue(product.price)} id="rad1" type="radio" name="valgmuligheder" value="1 stk" className="accent-orangebase" /> &nbsp; 1 stk
                   </label>
                   <label
                     for="rad2"
                     className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    <input onClick={toggleTrue} id="rad2" type="radio" name="valgmuligheder" value="Smagskasse" className="accent-orangebase" />
+                    <input onClick={() => toggleTrue(95)} id="rad2" type="radio" name="valgmuligheder" value="Smagskasse" className="accent-orangebase" />
                     &nbsp; Smagskasse
                   </label>
                   <label
                     for="rad3"
                     className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    <input onClick={toggleTrue} id="rad3" type="radio" name="valgmuligheder" value="12 stk" className="accent-orangebase" />
+                    <input onClick={() => toggleTrue(350)} id="rad3" type="radio" name="valgmuligheder" value="12 stk" className="accent-orangebase" />
                     &nbsp; 12 stk
                   </label>
                   <label
                     for="rad4"
                     className="h-auto border-2 border-black400 bg-white100 px-5  py-3 text-deskButtonSecondary font-normal  text-black400 disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    <input onClick={toggleTrue} id="rad4" type="radio" name="valgmuligheder" value="24 stk" className="accent-orangebase" />
+                    <input onClick={() => toggleTrue(700)} id="rad4" type="radio" name="valgmuligheder" value="24 stk" className="accent-orangebase" />
                     &nbsp; 24 stk
                   </label>
                   <label
@@ -100,7 +102,7 @@ const ProductGo = ({ product }) => {
             {showMe ? (
               <div>
                 <div className="mt-10">
-                  <h6 className="text-mobileH6 font-normal text-blackbase md:text-wh6">Pris {product.price} DKK</h6>
+                  <h6 className="text-mobileH6 font-normal text-blackbase md:text-wh6">Pris {selectedPrice} DKK</h6>
                 </div>
 
                 <form className="" onSubmit={handleSubmit}>
@@ -125,9 +127,9 @@ const ProductGo = ({ product }) => {
                 </form>
               </div>
             ) : (
-              <div className="flex flex-col gap-5 bg-yellowbase p-10 md:mt-10">
+              <div className="mt-5 flex flex-col gap-5 bg-yellowbase p-5 md:mt-10 md:p-10">
                 <div>
-                  <h5 className="py-3 font-tyk text-mobileH5 text-blackbase md:text-wh5">Spring bartenderen over med vores koncept</h5>
+                  <h5 className="py-1 font-tyk text-mobileH5 text-blackbase md:py-3 md:text-wh5">Spring bartenderen over med vores koncept</h5>
                   <p>
                     Vores koncept “drink what you can” egner sig perfekt til events som bryllup, konfirmation, fødselsdage mv.
                     <br />
@@ -139,7 +141,7 @@ const ProductGo = ({ product }) => {
                     resten tilbage, uden yderligere omkostninger for dig. Du vil derfor få det fulde beløb tilbage for alle dåser returneret.
                   </p>
                 </div>
-                <div className="my-20 grid grid-cols-3 gap-5 text-center">
+                <div className="my-5 grid grid-cols-3 gap-5 text-center md:my-10">
                   <div className="flex flex-col content-center items-center p-3">
                     <Image src={g1} alt=""></Image>
                     <p className="text-copy font-normal text-black">Fri levering & retur</p>
@@ -156,9 +158,9 @@ const ProductGo = ({ product }) => {
                 <div>
                   <h3 className="pt-3 font-tyk text-mobileH3 text-blackbase md:text-wh3">Bestil</h3>
                   <form action="" className="flex flex-col">
-                    <label className="pl-0 text-copy  font-normal text-black" for="event">
+                    <label className="mt-2 pl-0 text-copy font-normal text-black" for="event">
                       Type event <br />
-                      <select id="event" className="w-full p-5" name="event">
+                      <select id="event" className="my-2 w-full border border-black p-5 focus:outline-orangebase" name="event">
                         <option value="general"> Fødselsdag</option>
                         <option value="tickets"> Bryllup</option>
                         <option value="tickets"> Konfirmation</option>
@@ -166,52 +168,52 @@ const ProductGo = ({ product }) => {
                         <option value="tickets"> Blabla</option>
                       </select>
                     </label>
-                    <label className="pb-5 pl-0 text-copy font-normal text-black" for="event">
+                    <label className="mt-2 pb-5 pl-0 text-copy font-normal text-black" for="event">
                       Antal personer* <br />
-                      <input type="text" className="w-full p-5" placeholder="Eks. 45 pers." />
+                      <input type="text" className="my-2 w-full border border-black p-5 focus:outline-orangebase" placeholder="Eks. 45 pers." />
                     </label>
                   </form>
                   <div>
                     <h5 className="py-3 pt-7 font-tyk text-copy text-blackbase ">Hvilke varianter vil du have i pakken?</h5>
                     <div>
-                      <ul className="grid grid-cols-3">
-                        <li className="col-span-1">
-                          <input type="checkbox" id="cb1" />
-                          <label for="cb1">
+                      <ul className={`${styles["go-ul"]} grid grid-cols-3`}>
+                        <li className={`${styles["go-li"]} col-span-1`}>
+                          <input type="checkbox" id="cb1" className={styles["go-cb"]} />
+                          <label for="cb1" className={`${styles["go-label"]} pb-14 md:pb-10`}>
                             <div className="relative">
                               <Image className=" z-0" src={rhu} alt="Dåse"></Image>
-                              <p className="absolute z-10 -mt-4 w-full text-center  font-tyk text-copy text-blackbase">Rhubarbarian</p>
+                              <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Rhubarbarian</p>
                             </div>
                           </label>
                         </li>
-                        <li className="col-span-1">
-                          <input type="checkbox" id="cb2" />
-                          <label for="cb2">
+                        <li className={`${styles["go-li"]} col-span-1`}>
+                          <input type="checkbox" id="cb2" className={styles["go-cb"]} />
+                          <label for="cb2" className={`${styles["go-label"]} pb-14 md:pb-10`}>
                             <div className="relative">
                               <Image className=" z-0" src={spacey} alt="Dåse"></Image>
-                              <p className="absolute z-10 -mt-4 w-full text-center  font-tyk text-copy text-blackbase">Spacey G&T</p>
+                              <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Spacey G&T</p>
                             </div>
                           </label>
                         </li>
-                        <li className=" col-span-1">
-                          <input type="checkbox" id="cb3" />
-                          <label for="cb3">
+                        <li className={`${styles["go-li"]} col-span-1`}>
+                          <input type="checkbox" id="cb3" className={styles["go-cb"]} />
+                          <label for="cb3" className={`${styles["go-label"]} pb-14 md:pb-10`}>
                             <div className="relative">
                               <Image className=" z-0" src={bauhaus} alt="Dåse"></Image>
-                              <p className="absolute z-10 -mt-4 w-full text-center  font-tyk text-copy text-blackbase">Bauhaus Fizz</p>
+                              <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Bauhaus Fizz</p>
                             </div>
                           </label>
                         </li>
                       </ul>
                     </div>
-                    <div className="flex flex-col items-start">
-                      <form action="">
-                        <label htmlFor="" className="m-0 mt-10 pl-0 text-copy font-normal text-black">
-                          <input type="checkbox" name="" id="" />
+                    <div className="flex flex-col items-start md:mt-5">
+                      <form action="" className="flex flex-col gap-3">
+                        <label htmlFor="e2" className="m-0 mt-10 pl-0 text-copy font-normal text-black">
+                          <input className="accent-orangebase focus:outline-orangebase" type="checkbox" name="" id="e2" />
                           &nbsp; Jeg acceptere handelsbetingelser
                         </label>
-                        <label htmlFor="" className="m-0 mb-5 pl-0 text-copy font-normal text-black">
-                          <input type="checkbox" name="" id="" />
+                        <label htmlFor="e1" className="m-0 mb-5 pl-0 text-copy font-normal text-black">
+                          <input className="accent-orangebase focus:outline-orangebase" type="checkbox" name="" id="e1" />
                           &nbsp; Tilmeld nyhedsbrevet og få 10% på første køb
                         </label>
                       </form>

@@ -10,10 +10,7 @@ export default async function productPageGo({ params }) {
       <section className=" md:mx-32">
         <ProductGo product={product} />
       </section>
-      <section className=" overflow-hidden bg-matte200">
-        <Go />
-      </section>
-      <section className=" overflow-hidden md:mx-32">
+      <section className=" overflow-hidden bg-yellowbase">
         <ProductRecsGo />
       </section>
     </div>

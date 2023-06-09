@@ -10,7 +10,7 @@ import asset from "@/public/images/go/asset.png";
 
 function ProductRecsGo(props) {
   return (
-    <div className="my-16 ">
+    <div className="my-16 md:mx-32">
       <div className="p-5 md:mb-6">
         <h2 className="udvalgteProdukter font-tyk text-mobileH2 md:text-wh2">Se vores PlateauGO produkter</h2>
       </div>

@@ -1,25 +1,28 @@
-ul {
+/* Go.module.css */
+
+.go-ul {
   list-style-type: none;
 }
 
-li {
+.go-li {
   display: inline-block;
 }
 
-input[type="checkbox"][id^="cb"] {
+.go-cb[type="checkbox"][id^="cb"] {
   display: none;
 }
 
-label {
+.go-label {
   border: 1px solid #fff;
   padding: 10px;
   display: block;
   position: relative;
   margin: 10px;
   cursor: pointer;
+  text-align: center;
 }
 
-label:before {
+.go-label:before {
   background-color: white;
   color: black;
   content: " ";
@@ -37,25 +40,25 @@ label:before {
   transform: scale(0);
 }
 
-label Image {
+.go-label Image {
   height: 100px;
   width: 100px;
   transition-duration: 0.2s;
   transform-origin: 50% 50%;
 }
 
-:checked + label {
+.go-cb:checked + .go-label {
   border-color: #ec6342;
 }
 
-:checked + label:before {
+.go-cb:checked + .go-label:before {
   content: "✓";
   background-color: #ec6342;
   transform: scale(1);
 }
 
-:checked + label Image {
+.go-cb:checked + .go-label img {
   transform: scale(0.9);
-  box-shadow: 0 0 5px #333;
+
   z-index: -1;
 }
