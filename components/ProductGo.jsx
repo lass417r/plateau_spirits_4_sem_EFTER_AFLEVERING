@@ -185,7 +185,7 @@ const ProductGo = ({ product }) => {
                           <label for="cb1" className={`${styles["go-label"]} pb-14 md:pb-12`}>
                             <div className="relative">
                               <Image className=" z-0" src={rhu} alt="Dåse"></Image>
-                              <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Rhubarbarian</p>
+                              <p className="absolute z-10 w-full break-words pb-5 text-center font-copy text-scopy text-blackbase md:-mt-4 md:font-tyk md:text-copy">Rhubarbarian</p>
                             </div>
                           </label>
                         </li>
@@ -194,7 +194,7 @@ const ProductGo = ({ product }) => {
                           <label for="cb2" className={`${styles["go-label"]} pb-14 md:pb-12`}>
                             <div className="relative">
                               <Image className=" z-0" src={spacey} alt="Dåse"></Image>
-                              <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Spacey G&T</p>
+                              <p className="absolute z-10 w-full break-words pb-5 text-center font-copy text-scopy text-blackbase md:-mt-4 md:font-tyk md:text-copy">Spacey G&T</p>
                             </div>
                           </label>
                         </li>
@@ -203,7 +203,7 @@ const ProductGo = ({ product }) => {
                           <label for="cb3" className={`${styles["go-label"]} pb-14 md:pb-12`}>
                             <div className="relative">
                               <Image className=" z-0" src={bauhaus} alt="Dåse"></Image>
-                              <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Bauhaus Fizz</p>
+                              <p className="absolute z-10 w-full break-words pb-5 text-center font-copy text-scopy text-blackbase md:-mt-4 md:font-tyk md:text-copy">Bauhaus Fizz</p>
                             </div>
                           </label>
                         </li>

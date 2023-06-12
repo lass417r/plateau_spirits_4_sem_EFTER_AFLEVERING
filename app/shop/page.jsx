@@ -18,9 +18,9 @@ export default async function productPage({}) {
       <section className="md:mx-32 md:py-12">
         <Products products={products} />
       </section>
-      <section className=" md:mx-32 md:mb-20">
+      <section className="mx-5 my-10 md:mx-32 md:my-20">
         <h3 className="font-tyk text-mobileH3 md:text-wh3 ">PlateauGO produkter</h3>
-        <div className=" flex flex-col items-center gap-10 md:mt-20 md:grid md:grid-cols-3 md:items-baseline">
+        <div className=" mt-5 flex flex-col items-center gap-10  md:grid md:grid-cols-3 md:items-baseline">
           {productsGo.map((product) => (
             <PlateauGo key={product.id} product={product} />
           ))}
