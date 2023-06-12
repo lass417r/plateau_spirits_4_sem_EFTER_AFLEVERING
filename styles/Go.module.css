@@ -8,8 +8,9 @@
   display: inline-block;
 }
 
-.go-cb[type="checkbox"][id^="cb"] {
+.go-cb {
   display: none;
+  padding-bottom: 3rem;
 }
 
 .go-label {
@@ -20,6 +21,7 @@
   margin: 10px;
   cursor: pointer;
   text-align: center;
+  padding-bottom: 3rem;
 }
 
 .go-label:before {
@@ -49,6 +51,7 @@
 
 .go-cb:checked + .go-label {
   border-color: #ec6342;
+  padding-bottom: 3rem;
 }
 
 .go-cb:checked + .go-label:before {
