@@ -12,11 +12,10 @@ export default async function productPage({}) {
     <div className="md:mx-5">
       {/* Her videresender vi vores products array til 
       vores komponent der mapper over dataen */}
-      <div className="px-20 md:mt-20">
+      <div className="px-28 md:mt-10">
         <h1 className="font-tyk text-mobileH1 text-blackbase md:text-wh1">Plateau Shop</h1>
-        <h5 className="font-tyk text-mobileH5 text-blackbase md:text-wh6">Alle produkter</h5>
       </div>
-      <section className="md:mx-32 md:py-24">
+      <section className="md:mx-32 md:py-12">
         <Products products={products} />
       </section>
       <section className=" md:mx-32 md:mb-20">

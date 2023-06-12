@@ -18,8 +18,9 @@ const ProductGo = ({ product }) => {
   const router = useRouter();
   const { mutate } = useSWRConfig();
   const [isPending, startTransition] = useTransition();
-  const [selectedPrice, setSelectedPrice] = useState(product.price);
   const [quantity, setQuantity] = useState(1);
+
+  const [selectedPrice, setSelectedPrice] = useState(product.price);
   const [showMe, setShowMe] = useState(true);
 
   const toggleTrue = (price) => {
@@ -100,6 +101,7 @@ const ProductGo = ({ product }) => {
             </div>
 
             {showMe ? (
+              // true
               <div>
                 <div className="mt-10">
                   <h6 className="text-mobileH6 font-normal text-blackbase md:text-wh6">Pris {selectedPrice} DKK</h6>
@@ -127,6 +129,7 @@ const ProductGo = ({ product }) => {
                 </form>
               </div>
             ) : (
+              // false
               <div className="mt-5 flex flex-col gap-5 bg-yellowbase p-5 md:mt-10 md:p-10">
                 <div>
                   <h5 className="py-1 font-tyk text-mobileH5 text-blackbase md:py-3 md:text-wh5">Spring bartenderen over med vores koncept</h5>
@@ -179,7 +182,7 @@ const ProductGo = ({ product }) => {
                       <ul className={`${styles["go-ul"]} grid grid-cols-3`}>
                         <li className={`${styles["go-li"]} col-span-1`}>
                           <input type="checkbox" id="cb1" className={styles["go-cb"]} />
-                          <label for="cb1" className={`${styles["go-label"]} pb-14 md:pb-10`}>
+                          <label for="cb1" className={`${styles["go-label"]} pb-14 md:pb-12`}>
                             <div className="relative">
                               <Image className=" z-0" src={rhu} alt="Dåse"></Image>
                               <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Rhubarbarian</p>
@@ -188,7 +191,7 @@ const ProductGo = ({ product }) => {
                         </li>
                         <li className={`${styles["go-li"]} col-span-1`}>
                           <input type="checkbox" id="cb2" className={styles["go-cb"]} />
-                          <label for="cb2" className={`${styles["go-label"]} pb-14 md:pb-10`}>
+                          <label for="cb2" className={`${styles["go-label"]} pb-14 md:pb-12`}>
                             <div className="relative">
                               <Image className=" z-0" src={spacey} alt="Dåse"></Image>
                               <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Spacey G&T</p>
@@ -197,7 +200,7 @@ const ProductGo = ({ product }) => {
                         </li>
                         <li className={`${styles["go-li"]} col-span-1 `}>
                           <input type="checkbox" id="cb3" className={styles["go-cb"]} />
-                          <label for="cb3" className={`${styles["go-label"]} pb-14 md:pb-10`}>
+                          <label for="cb3" className={`${styles["go-label"]} pb-14 md:pb-12`}>
                             <div className="relative">
                               <Image className=" z-0" src={bauhaus} alt="Dåse"></Image>
                               <p className="absolute z-10 w-full break-words text-center text-scopy font-normal text-blackbase md:-mt-4 md:font-tyk md:text-copy">Bauhaus Fizz</p>

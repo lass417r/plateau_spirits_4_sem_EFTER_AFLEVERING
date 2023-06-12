@@ -5,9 +5,6 @@ import minibg from "../../public/images/go/daasen.gif";
 import pic1 from "../../public/images/go/pic1.png";
 
 export default async function productsPageGo({}) {
-  {
-    /* Her fetcher vi vores productdata og modtager det som et array */
-  }
   const { results: products } = await getProductsGo({ page: 1 });
 
   return (
