@@ -54,7 +54,7 @@ export default async function productsPageGo({}) {
       <section id="aycd" className="bg-clay">
         <div className="py-5 md:mx-32">
           <div className="flex flex-col items-center p-10 text-center ">
-            <h2 className="mt-5 font-tyk text-mobileH2 md:mb-5 md:mt-20 md:text-wh2 ">Hvorfor All you can drink?</h2>
+            <h2 className="mt-5 font-tyk text-mobileH2 md:mb-5 md:mt-20 md:text-wh2 ">Hvorfor Drink what you can?</h2>
           </div>
           <div className="flex flex-col gap-10  md:grid md:grid-cols-3 md:pb-20">
             <div className="flex flex-col items-center gap-10 p-5">

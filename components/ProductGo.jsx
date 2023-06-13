@@ -56,6 +56,9 @@ const ProductGo = ({ product }) => {
           <div>
             <div className="mt-3">
               <div className="font-copy text-copy text-blackbase" dangerouslySetInnerHTML={{ __html: product.description }} />
+              <p className="font-tyk text-copy md:text-lcopy">
+                <br /> 14% alcohol, 220ml
+              </p>
             </div>
 
             <div className="mt-10">

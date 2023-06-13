@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
 
         <main className="z-0">
           {children}
-          <OverAtten></OverAtten>
+          <OverAtten />
           <Cookiebox />
         </main>
 
