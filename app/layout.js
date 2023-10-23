@@ -63,6 +63,11 @@ export default function RootLayout({ children }) {
       lang="da"
       className={`${rocaOneBlack.variable} ${rocaOneRegular.variable} ${rocaOneBold.variable} ${rocaOneHeavy.variable} ${rocaOneThin.variable} ${rocaOneLight.variable} ${ebGaramond.variable}`}
     >
+      <head>
+        <title>Meta Tag Example</title>
+        <meta name="google" content="nositelinkssearchbox" key="sitelinks" />
+        <meta name="google" content="notranslate" key="notranslate" />
+      </head>
       <body className="bg-greybase">
         <TopBanner className="z-0"></TopBanner>
 
